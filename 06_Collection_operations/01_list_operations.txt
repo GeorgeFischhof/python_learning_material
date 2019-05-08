@@ -1,0 +1,92 @@
+
+https://docs.python.org/3.7/tutorial/datastructures.html
+
+https://docs.python.org/3.7/library/stdtypes.html#typesseq-common
+
+
+The most important functions:
+=============================
+
+list.append(element)
+--------------------
+Add one item to the end of the list
+
+
+list.extend(iterable)
+list += iterable
+---------------------
+Extend the list by appending all the items in the given iterable.
+
+
+list.insert(index, item)
+------------------------
+Insert an item at a given position.
+The first argument is the index of the element before which to insert,
+so a.insert(0, x) inserts at the front of the list,
+and a.insert(len(a), x) is equivalent to a.append(x).
+
+
+list.remove(item)
+-----------------
+Remove the first item from the list whose value is item
+It is an error if there is no such item.
+
+
+list.pop(index)
+---------------
+Remove the item at the given position in the list, and return it.
+If no index is specified, pop() removes and returns the last item in the list.
+
+
+list.clear()
+------------
+Remove all items from the list.
+Equivalent to del example_list[:]
+
+
+list.index(x)
+list.index(x, start)
+list.index(x, start, end)
+----------------------------
+Return zero-based index in the list of the first item
+whose value is equal to x.
+Raises a ValueError if there is no such item.
+The optional arguments start and end are interpreted
+as in the slice notation and are used to limit the search
+to a particular subsequence of the list.
+The returned index is computed relative to the
+beginning of the full sequence rather than the start argument.
+
+
+list.count(item)
+----------------
+Return the number of times item appears in the list.
+
+
+list.sort(key=None, reverse=False)
+----------------------------------
+Sort the items of the list in place
+(the arguments can be used for sort customization,
+see sorted() for their explanation).
+
+
+list.reverse()
+--------------
+Reverse the elements of the list in place.
+
+
+list.copy()
+-----------
+Return a shallow copy of the list.
+Equivalent to a[:]
+
+
+The del statement
+-----------------
+There is a way to remove an item from a list given its index instead of its value:
+the del statement.
+It can also be used to remove slices from a list or clear the entire list
+
+del list[0]
+del list[2:4]
+del list

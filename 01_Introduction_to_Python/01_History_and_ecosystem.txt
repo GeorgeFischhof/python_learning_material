@@ -1,0 +1,84 @@
+
+
+History and ecosystem
+=====================
+
+
+Python
+======
+
+https://en.wikipedia.org/wiki/Python_(programming_language)
+
+
+Python is an interpreted, high-level, general-purpose programming language.
+Created by Guido van Rossum and first released in 1991,
+Python has a design philosophy that emphasizes code readability,
+notably using significant whitespace.
+
+Scripting language, usually called very high-level because the developer's
+mainly calls APIs or library module functions.
+
+Python is dynamically typed and garbage-collected. It supports multiple
+programming paradigms, including procedural, object-oriented,
+and functional programming
+
+
+Guido van Rossum (1956)
+=======================
+
+https://en.wikipedia.org/wiki/Guido_van_Rossum
+
+
+Dutch developer, worked for Google, Dropbox...
+He was the "Benevolent dictator for life" (BDFL) for Python until 2018
+
+Python is not named after the snake, but Monty Python's Flying Circus,
+because Guido was a big fun of the series.
+
+
+Ecosystem
+=========
+
+Python is an open source language.
+And because of this it has a great community. People put their ready-made
+functions, libraries publicly available into Python Package Index:
+
+https://pypi.org/
+
+Right now the index contains more than 176 000 packages. (continuously growing)
+
+And because it is open source the Python language itself is developed
+according to needs of the users.
+
+
+Python Software Foundation
+==========================
+
+https://www.python.org/psf/
+
+
+The mission of the Python Software Foundation is to promote, protect,
+and advance the Python programming language, and to support and
+facilitate the growth of a diverse and international
+community of Python programmers.
+
+You can donate as well ;-)
+https://www.python.org/psf/donations/
+
+And can check the who donated so far:
+https://legacy.python.org/psf/donations/
+
+
+Python mailing lists
+====================
+
+https://www.python.org/community/lists/
+
+Tutor
+http://www.python.org/mailman/listinfo/tutor
+
+General Python
+http://mail.python.org/mailman/listinfo/python-list
+
+Python ideas
+http://mail.python.org/mailman/listinfo/python-ideas

@@ -1,0 +1,65 @@
+
+
+Lists
+=====
+
+In Python you define a list using brackets.
+An empty list would simply be fruits = []
+But it is much more readable if we
+create it with list constructor:
+
+fruits = list()
+
+
+A list can have any number of elements of any type.
+Elements can be repeated
+The elements can have different types
+
+The elements in the list are ordered by their index.
+The index starts with 0 (zero)
+
+To access a list element use the index between the brackets,
+such as fruits[0], fruits[1] and so on.
+
+example:
+--------
+
+cities_and_zip_numbers = ["New York", 10001, "Los Angles", 90001, "Boston", 02101,]
+cities_and_zip_numbers = list("New York", 10001, "Los Angles", 90001, "Boston", 02101,)
+print(cities_and_zip_numbers[0])
+print(cities_and_zip_numbers)
+
+# the last comma is not a typo, it is allowed, in fact sometimes it is very good
+
+
+Tuples
+======
+
+Tuples are constant lists.
+They are unchangeable (documentations call them immutable)
+Tuples are defined with parenthesis
+
+animals = ('elephant', 'frog')
+
+But it is much more readable if we
+create it with list constructor:
+
+animals = tuple('elephant', 'frog')
+
+Note: there is no too much sense to create empty tuple,
+because after creation it is not changeable
+
+
+example:
+--------
+
+cities_and_zip_numbers = ("New York", 10001, "Los Angles", 90001, "Boston", 02101,)
+cities_and_zip_numbers = tuple("New York", 10001, "Los Angles", 90001, "Boston", 02101,)
+print(cities_and_numbers[0])
+print(cities_and_numbers)
+
+
+To get all elements of a list or tuple you can use a for cycle:
+
+for item in cities_and_zip_numbers:
+    print(item)

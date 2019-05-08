@@ -1,0 +1,103 @@
+
+
+Syntax
+======
+
+
+Code block
+==========
+
+A program consists of the following building blocks
+- sequence (of steps)
+- conditional (steps)
+- loop (ing steps)
+
+Instructions that initiate a group of other instructions (called block)
+(Conditions, loops, function definitions, with statement, classes...)
+are terminated with a colon :
+and the block must be indented with 4 spaces
+examples:
+
+if a == 1:
+    pass
+
+for i in range(3):
+    pass
+
+def some_function():
+    pass
+
+
+Comments
+========
+
+Comments are started with hash mark #
+examples:
+
+# This is a commented line, this will not be executed
+print('apple') # Comment starts here, apple will be printed, nothing else happens
+
+
+
+Python is Case sensitive
+========================
+
+The keywords are all in lower case.
+variables, modules, packages, classes, constants can contain upper case letters, but
+case sensitivity remains:
+variable1 not equals to Variable1
+
+>>> variable1 = 42
+>>> Variable1 = 'apple'
+>>> print(variable1)
+42
+>>> print(Variable1)
+apple
+
+
+
+Indentation matters
+===================
+
+>>> for i in range(3):
+>>>     print(i)
+>>>     print('finished')
+0
+finished
+1
+finished
+2
+finished
+
+
+>>> for i in range(3):
+>>>     print(i)
+>>> print('finished')
+0
+1
+2
+finished
+
+
+
+One command per line
+====================
+
+There is a possibility to write more instructions in one line,
+the separator is semicolon ;
+
+But it is not readable, do not do this
+
+And actually there are only some very rare cases,
+when there is a need to write more instructions into one line
+
+
+
+How to write "pythonic code"
+============================
+
+https://www.python.org/dev/peps/pep-0008/
+
+Variables, functions: lower case, underscore between words
+Classes camel case (giraffe)
+Constants: all capital letters with underscores
