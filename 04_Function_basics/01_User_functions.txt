@@ -6,7 +6,17 @@ User functions
 Functions are a convenient way to divide your code into useful blocks
 Functions are small parts of repeatable and reusable code.
 
-A function can accept parameters, and can return values
+
+A function can accept parameters listed in the parenthesis,
+and can return values.
+
+Function definition has the following parts:
+- def keyword
+- name of the function
+- parameters in parenthesis (optional)
+- colon as this is a code block
+- return value(s) (optional)
+
 
 A function in Python must have at least one instruction,
 if there is no instruction, the
