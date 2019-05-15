@@ -45,6 +45,7 @@ print(add_numbers(number_1=3, number_2=4))
 If the function has no explicit return value,
 Python will add None implicitly, so the function
 will return None.
+
 The
 return
 statement is used to return - give back value(s)

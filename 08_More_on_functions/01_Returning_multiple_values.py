@@ -67,6 +67,7 @@ any change in the existing caller functions
 
 '''
 
+print('\n* * * * * * * * * *\n')
 input('Return with dict')
 print('\n* * * * * * * * * *\n')
 

@@ -1,0 +1,63 @@
+
+Generators - Generator functions
+================================
+
+https://realpython.com/introduction-to-python-generators/
+
+
+Memory efficient list-like stuff
+Can be very useful when you have large amount of data,
+and you can process it by chunks.
+For example large number of large files. ...
+
+Generates one element at a time
+
+(As a side-effect ;-) ) The usage can be started
+after the first element is generated
+
+We can use for cycle to iterate over it,
+like it was a list.
+
+
+Syntax
+======
+
+
+yield
+-----
+
+The
+yield
+statement is used in a function to return a value
+
+The state of the function is saved, and the next
+function "call" will continue the execution of the
+function
+
+
+Usage
+=====
+
+for cycle
+---------
+
+Just as it would be a list
+
+for item in generator_object:
+    print(item)
+
+
+next
+----
+
+Instead of using the for cycle we can simulate it with the
+next
+statement for the iteration. Until the generator is exhausted
+
+
+exhausted
+---------
+
+When the generator is exhausted it will raise
+StopIteration exception (for cycle use this to
+finish the cycle)
