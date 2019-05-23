@@ -50,6 +50,20 @@ Can be used for example
 - when selecting a key in sorting,
 - for short and obvious calculations
 
+
+Example sorting usage
+---------------------
+
+students = [
+    ('john', 'A', 15),
+    ('jane', 'B', 12),
+    ('dave', 'B', 10),
+]
+sorted(students, key=lambda student: student[2])   # sort by age
+# ==> [('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+
+
+
 Note: as it has no name, it can reduce the readability,
 because the reader must evaluate the expression
 during reading instead of reading a meaningful name

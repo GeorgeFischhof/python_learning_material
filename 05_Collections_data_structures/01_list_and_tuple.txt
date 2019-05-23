@@ -3,7 +3,7 @@
 Lists
 =====
 
-In Python you define a list using brackets.
+In Python you define a list by using brackets.
 An empty list would simply be fruits = []
 But it is much more readable if we
 create it with list constructor:
@@ -21,8 +21,9 @@ The index starts with 0 (zero)
 To access a list element use the index between the brackets,
 such as fruits[0], fruits[1] and so on.
 
-example:
---------
+
+example
+-------
 
 cities_and_zip_numbers = ["New York", 10001, "Los Angles", 90001, "Boston", 02101,]
 cities_and_zip_numbers = list("New York", 10001, "Los Angles", 90001, "Boston", 02101,)

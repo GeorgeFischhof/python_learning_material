@@ -1,0 +1,105 @@
+
+DateTime
+========
+
+https://docs.python.org/3/library/datetime.html
+
+
+datetime.datetime object
+------------------------
+
+https://docs.python.org/3/library/datetime.html#datetime.datetime
+
+
+datetime.datetime.now()
+-----------------------
+returns the current date and time, timezone can be given as a parameter
+now = datetime.datetime.now()
+
+
+datetime.datetime.utcnow()
+--------------------------
+returns the current date and time in UTC timezone
+equals to
+datetime.datetime.now(datetime.timezone.utc)
+
+
+Attributes of a datetime.datetime object
+----------------------------------------
+year         ==> now.year
+month        ==> now.month
+day          ==> now.day
+hour         ==> now.hour
+minute       ==> now.minute
+second       ==> now.second
+microsecond  ==> now.microsecond
+tzinfo       ==> now.tzinfo
+fold         ==> now.fold
+
+
+Useful methods of a datetime.datetime object
+--------------------------------------------
+date()       ==> now.date()
+time()       ==> now.time()
+
+
+replace(year=self.year, month=self.month, day=self.day,
+        hour=self.hour, minute=self.minute, second=self.second,
+        microsecond=self.microsecond, tzinfo=self.tzinfo, fold=0)
+-----------------------------------------------------------------
+
+Return a datetime with the same attributes, except for those
+attributes given new values by whichever keyword arguments
+are specified. Note that tzinfo=None can be specified to
+create a naive datetime from an aware datetime with no
+conversion of date and time data.
+
+
+weekday()
+---------
+Return the day of the week as an integer, where Monday is 0 and Sunday is 6
+
+
+isoweekday()
+------------
+Return the day of the week as an integer, where Monday is 1 and Sunday is 7
+
+
+isoformat(sep='T')
+------------------
+Return a string representing the date and time in ISO 8601 format,
+YYYY-MM-DDTHH:MM:SS.ffffff or, if microsecond is 0, YYYY-MM-DDTHH:MM:SS
+
+To get ISO format time without microseconds:
+iso_time = now.replace(microsecond=0).isoformat()
+
+
+Converter functions
+===================
+
+datetime.datetime.strptime(date_string, format)
+-----------------------------------------------
+Return a datetime object corresponding to date_string,
+parsed according to format.
+(string parse time)
+
+
+datetime.datetime.strftime(format)
+Return a string representing the date and time,
+controlled by an explicit format string
+(string from time)
+
+
+Format strings
+--------------
+https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
+
+
+Construct a datetime object
+===========================
+
+new_datetime = datetime.datetime(year, month, day,
+                                 hour=0, minute=0, second=0,
+                                 microsecond=0, tzinfo=None, fold=0)
+
+new_datetime = datetime.datetime(2019, 5, 21, 13, 45, 50)

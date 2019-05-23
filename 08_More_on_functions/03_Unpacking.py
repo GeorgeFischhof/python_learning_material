@@ -5,8 +5,8 @@
 # Operators
 # ---------
 
-# List unpacking: *
-# dict  unpacking: **
+# list unpacking: *
+# dict unpacking: **
 
 
 def function_with_unknown_number_of_parameters(known, default=None, *args, **kwargs):
