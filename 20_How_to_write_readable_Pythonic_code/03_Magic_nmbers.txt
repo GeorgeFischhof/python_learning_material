@@ -1,0 +1,67 @@
+
+
+
+Magic numbers and magic strings
+
+list_1 = [1, 2, 3, 4, 5]
+list_2 = [2, 3, 4, 5, 6]
+list_3 = [3, 4, 5, 6, 7]
+
+matrix = [list_1, list_2, list_3]
+
+for row in range(3):
+    for cell in range(5):
+        print(matrix[row][cell])
+
+
+Right now we can see or we can think we know
+why the range(3) and range(5) are there.
+But what if the lists and the matrix come from different places?
+...
+and we want to process them on a third different place?
+
+There is no way to know where the 3 and the 5 comes from ...
+These are the magic numbers.
+(The similar can happen with strings or with any other data types.)
+
+What can we do with them to make the code understandable?
+Let's see
+
+1.)
+give a name to the numbers (assign to a variable)
+with the names it is much more understandable:
+
+number_of_rows = 3
+number_of_cells = 5
+
+for row in range(number_of_rows):
+    for cell in range(number_of_cells):
+        print(matrix[row][cell])
+
+
+2.)
+if we need the index indeed
+(quite rare case, and normally solved with enumerate function),
+then let's acquire it from the collection itself:
+
+number_of_rows = len(matrix)
+number_of_cells = len(list_1)
+
+for row in range(number_of_rows):
+    for cell in range(number_of_cells):
+        print(matrix[row][cell])
+
+
+3.)
+the Pythonic way is to use the for cycle to iterate through the list
+because the lis is iterable,
+and this way there is no need to use index nor the range
+
+for row in matrix:
+    for cell in row:
+        print(cell)
+
+
+As you can see there is no any magic number appearing from nothing
+And as there is no burned-in numbers, if the length of the list changes,
+the program will work well without any change

@@ -1,0 +1,60 @@
+
+https:\\docs.pytest.org\en\latest\
+https:\\docs.pytest.org\en\latest\contents.html
+
+
+Very good test framework, actively maintained, has releases about in every month
+has more than 600 plugins in the compatibility list (as date of 2019-03-22)
+http:\\plugincompat.herokuapp.com\
+and perhaps there are other ones not mentioned in the compatibility list
+
+
+Plugins that I recommend to use / install in any case:
+    - pytest-assume
+      allows several failing assertions (assumes) in one test case
+    - pytest-html
+      creates quite good test report
+
+Other very useful plugins:
+    - pytest-xdist
+      if there is a need and possibility, xdist will execute test cases parallel
+    - pytest-bdd
+      testing with behavior driven development methodology
+
+
+Mostly compatible with unit test from standard library and with nosetest
+
+
+Equipped with mechanisms to
+    - setup and tear down environment for test cases (module level, function level)
+    - put fixtures to test cases
+
+
+Test results can be:
+    - passed
+    - failed
+    - expected failed
+    - expected passed
+    - error
+    - skipped
+
+
+Automatic test discovery:
+1.) search for test_*.py or *_test.py files
+2.) From those files, collect test items:
+    functions prefixed with test outside of class
+    test prefixed functions or methods inside Test prefixed classes (without an __init__ method)
+
+
+Example test case
+
+def test_passed():
+    assert True, 'This test passes'
+
+def test_fails():
+    assert False, 'This test fails'
+
+
+NOTE: assert is a statement, NOT function,
+do NOT write parenthesis () to parameters!!!
+Because then it will be True always

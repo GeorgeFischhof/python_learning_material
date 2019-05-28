@@ -1,0 +1,89 @@
+
+Classes
+=======
+
+A class is a "template" or a "blueprint" for similar instances (objects)
+
+
+http://anandology.com/python-practice-book/index.html
+http://anandology.com/python-practice-book/object_oriented_programming.html
+
+
+A class contains attributes (data) and methods (functions) for the given type of object
+Data is usually encapsulated: can be read or write through methods.
+Methods that directly set a value to or get a value from an attribute are called
+setters and getters
+
+A class does nothing. Only the instance will work.
+
+
+class MyClass:
+    pass
+
+class MyInheritedClass(ParentClass1, ParentClass2):
+    pass
+
+MyInstance = MyClass()
+
+
+
+init
+====
+
+The first method __init__() is a special method, which is the initialization method
+that Python calls when you just have created a new instance of this class.
+(After the creation)
+The parameters that you want to pass to the class are received via this method.
+
+You declare other class methods like normal functions with the exception that the first
+argument to each method is self. Python adds the self argument to the list for you;
+you do not need to (and must not) include it when you call the methods.
+
+
+
+Static methods
+==============
+
+Static methods have no knowledge about classes, neither instances.
+They are just standalone functions put into class because they
+relates to logic of the class.
+
+They have no self parameter, decorated with @staticmethod
+
+
+Example
+-------
+
+class Car:
+
+    @staticmethod
+    def calculate_consumption(fuel_quantity, mileage):
+        return fuel_quantity / mileage * 100
+
+
+
+Instance method, Class method, Static method
+============================================
+
+https://realpython.com/instance-class-and-static-methods-demystified/
+
+
+
+Abstract method, Abstract class
+===============================
+
+https://dbader.org/blog/abstract-base-classes-in-python
+
+
+
+We are all responsible developers
+=================================
+
+In Python everything is public (!)
+
+_spam means internal by convention, import * will not import it
+__spam means very internal (private); name mangling ==> _classname__spam still accessible (!)
+
+
+Underscores in Python:
+https://dbader.org/blog/meaning-of-underscores-in-python
