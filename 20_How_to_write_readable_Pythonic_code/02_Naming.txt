@@ -1,0 +1,109 @@
+
+Use good names
+==============
+
+Programs must be written for people to
+read, and only incidentally for machines
+to execute.
+
+
+Sometimes it takes more time to find out a good name than
+write the code behind that name ... ;-)
+
+
+Avoid Generic Names
+-------------------
+tmp
+tmp2
+manager
+data
+
+
+
+Avoid using datatype as name
+----------------------------
+Bad:
+
+sum(list)
+count_words(string)
+
+
+Good:
+
+sum(numbers)
+count_words(sentence)
+
+
+
+Nouns & Verbs
+-------------
+- Use nouns for variables and classes.
+size, price, task, scheduler, bank, account
+
+- Use verbs for functions.
+get_file_size, make_account, deposit
+
+
+
+Use plural for collections
+--------------------------
+files = os.listdir(directory)
+
+for person in people
+
+
+
+Example
+=======
+
+What does the following function do?
+
+def get_data(x, y):
+    z = []
+    for i in x:
+        z.append(i[y])
+    return z
+
+
+
+Check this one; the same code with appropriate names:
+
+def get_column(data_set, col_index):
+    column = []
+    for row in data_set:
+        column.append(row[col_index])
+    return column
+
+
+
+
+Two stated stuff
+================
+
+open = True
+closed = False
+
+# we can use this:
+if door is open:
+    air_comes_in()
+
+
+==> and instead of this
+def change_door_state(door):
+    if door == 'open':
+        door = 'closed'
+    else:
+        door = 'open'
+    return door
+
+
+==> we can use this:
+def change_door_state(door):
+    return not door
+
+
+
+
+DO NOT use 0 and 1 and similar things instead of True and False or None
+=======================================================================
+That is (can be) harmful

@@ -1,0 +1,133 @@
+
+import logging
+import os
+
+logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
+logging.info('This is an info message')
+
+# ==> INFO:root:This is an info message
+Right now we are able to create info message
+(and debug too)
+
+
+Important parameters of basicConfig
+-----------------------------------
+https://docs.python.org/3/library/logging.html#logging.basicConfig
+
+- filename
+Specifies that a FileHandler be created,
+using the specified filename,
+rather than a StreamHandler. (file instead of stdout)
+
+- filemode
+If filename is specified, open the file in this mode.
+Defaults to 'a'
+
+- format
+Use the specified format string for the handler
+
+- datefmt
+Use the specified date/time format,
+as accepted by time.strftime()
+
+- style
+If format is specified, use this style for the format string.
+One of '%', '{' or '$' for printf-style, str.format()
+or string.Template respectively.
+Defaults to '%'
+
+- level
+Set the root logger level to the specified level
+
+
+Example with level and format
+-----------------------------
+
+import logging
+
+logging.basicConfig(
+    level="INFO",
+    format='{asctime} - {module:20} - {levelname:8} - {message}',
+    style='{'
+)
+logging.info('This is an info message')
+
+# ==> 2019-06-18 15:30:37,384 - <input>              - INFO     - This is an info message
+
+
+Logrecord attributes
+--------------------
+https://docs.python.org/3/library/logging.html#logrecord-attributes
+
+These variables can be put into format, to extend the message
+
+- args
+The tuple of arguments merged into msg to produce message,
+or a dict whose values are used for the merge
+(when there is only one argument, and it is a dictionary)
+
+- asctime
+Human-readable time when the LogRecord was created.
+By default this is of the form ‘2003-11-28 16:49:45,896’
+
+- created
+Time when the LogRecord was created
+(as returned by time.time())
+
+- exc_info
+Exception tuple (à la sys.exc_info) or,
+if no exception has occurred, None
+
+- filename
+Filename portion of pathname
+
+- funcName
+Name of function containing the logging call
+
+- levelname
+Text logging level for the message
+('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
+
+- lineno
+Source line number where the logging call was issued
+(if available)
+
+- message
+The logged message, computed as msg % args.
+This is set when Formatter.format() is invoked
+
+- module
+Module (name portion of filename)
+
+- msg
+The format string passed in the original logging call.
+Merged with args to produce message
+
+- name
+Name of the logger used to log the call
+
+- pathname
+Full pathname of the source file where
+the logging call was issued (if available)
+
+- process
+Process ID (if available)
+
+- processName
+Process name (if available)
+
+- relativeCreated
+Time in milliseconds when the LogRecord was created,
+relative to the time the logging module was loaded
+
+- stack_info
+Stack frame information (where available)
+from the bottom of the stack in the current thread,
+up to and including the stack frame of the logging
+call which resulted in the creation of this record
+
+- thread
+Thread ID (if available)
+
+- threadName
+Thread name (if available)

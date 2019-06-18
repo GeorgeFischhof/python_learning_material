@@ -1,7 +1,6 @@
 
-
-
 Magic numbers and magic strings
+===============================
 
 list_1 = [1, 2, 3, 4, 5]
 list_2 = [2, 3, 4, 5, 6]

@@ -1,0 +1,36 @@
+
+About commenting the code
+=========================
+
+
+Don’t say the obvious
+---------------------
+
+Bad:
+
+# increments x by 2
+x = x + 2
+
+
+Good:
+
+# compensate for border on both the sides
+x = x + 2
+
+
+
+Make Comments Unnecessary
+-------------------------
+
+Bad:
+
+# process documents
+...
+
+
+Good:
+(create a function instead of commenting the code)
+
+docs = process_documents(...)
+
+

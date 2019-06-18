@@ -54,3 +54,6 @@ if (
     and we_can_do_3
 ):
     go_further_and_do()
+
+
+# Check the blank lines above: they separate the different logical parts
