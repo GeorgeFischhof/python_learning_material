@@ -131,3 +131,19 @@ Thread ID (if available)
 
 - threadName
 Thread name (if available)
+
+
+NOTE:
+basicConfig configures the root logger,
+therefore it can be configured only once
+
+And if we want to configure it,
+we must do the configuration before
+the first call to the following functions
+
+logging.debug
+logging.info
+logging.warning
+logging.error
+logging.critical
+

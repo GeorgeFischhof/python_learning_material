@@ -14,6 +14,8 @@ Logging is a very useful tool in a programmer’s toolbox
 It can help you develop a better understanding of what happens
 and when during the running of your program.
 (debug logging)
+You cna use it instead of printing values,
+and it can be turned off with a simple setting (no debug logging)
 
 It can help you inform the user about special events.
 Or in case of serious events,
@@ -25,13 +27,14 @@ can be written to file.
 
 
 
-The logging system is hierarchical
-----------------------------------
-therefore the logging of an imported submodule
-can be turned on / off from the module which imported the submodule.
+The logging system is hierarchical (by name)
+--------------------------------------------
+therefore the logging of an imported submodule can
+appear between the importer's logs
+and they can be accessed, or turned off
 
 Of course the logging of the submodule must be written in a way that enables this behaviour.
-(See logging in library)
+(See logging in multiple modules and logging in library)
 
 
 Log flow (simplified)
@@ -124,3 +127,16 @@ Shutting down the logging subsystem
 
 import atexit
 atexit.register(logging.shutdown)
+
+
+
+Notes on filter
+===============
+https://docs.python.org/3/library/logging.html#filter-objects
+https://docs.python.org/3/howto/logging-cookbook.html#using-filters-to-impart-contextual-information
+
+Filters are functions that we have to implement which proccesses the logrecord
+If it returns a non-zero or True value, then the record will go further on its way.
+Otherwise the record is dropped.
+
+The filer can add additional information to the record before letting it go further.
