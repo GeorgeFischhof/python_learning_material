@@ -1,0 +1,89 @@
+
+Underscore in numeric literals
+==============================
+
+print(1_000_000)  # 1000000
+print(0x_FF_FF_FF_FF)  # 4294967295
+
+
+
+f-string, formatted string
+==========================
+https://docs.python.org/3.7/library/string.html#formatstrings
+
+number = 5
+print(f'I have {number} apples')  # I have 5 apples
+
+number = 123.456789
+print(f'{number:07.2f}')  # 0123.46 sum 7 characters, zero padded, 2 decimals
+
+number = 2/3
+print(f'{number:5.2%}')  # 66.67% sum 5 characters, percentage with 2 decimals
+
+big_number = 123456789
+print(f'{big_number:_}')  # 123_456_789
+
+big_hex = 0xdeadbeef
+print(f'{big_hex:_x}')  # dead_beef
+
+width = 10
+precision = 4
+value = 12.34567
+print(f"result: {value:0{width}.{precision}}")  # 0000012.35  zero padded
+print(f"result: {value:{width}.{precision}}")   #      12.35  space padded
+# width and precision read from variables
+
+
+Variable annotations
+====================
+https://docs.python.org/3/library/typing.html
+
+Function annotation exists from 3.0
+
+number :int = 5
+
+numbers :list = list()
+
+from typing import List
+numbers :List[int] = list()
+
+
+
+Simpler subclass init / creation
+================================
+https://docs.python.org/3.6/reference/datamodel.html#object.__init_subclass__
+
+class Apple:
+    def __init__(self):
+        print('Apple init is executed')
+
+    def __init_subclass__(cls):
+        print('Class Apple is subclassed')
+        print(f'Created subclass is {cls.__name__}')
+
+class GreenApple(Apple):
+    pass
+
+my_apple = GreenApple()  # Apple's init will be called only here
+
+==>
+Class Apple is subclassed
+Created subclass is GreenApple
+Apple init is executed
+
+You do not have to call super's init, in the subclass,
+it can be implemented in super
+
+
+pathlib - Object-oriented filesystem
+====================================
+https://docs.python.org/3.7/library/pathlib.html#module-pathlib
+
+The module created in 3.4, but right now it is used by several functions
+
+
+
+Others
+======
+
+Decimal('-3.14').as_integer_ratio()  # (-157, 50)

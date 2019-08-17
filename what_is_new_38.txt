@@ -1,0 +1,86 @@
+
+:= Assignment expression - The walrus operator
+==============================================
+https://docs.python.org/3.8/whatsnew/3.8.html#assignment-expressions
+
+Note: accepting this led to Guido'd retirement as BDFL (2018-07-12)
+
+
+while (block := f.read(256)) != '':
+    process(block)
+
+
+The equivalent code without this operator:
+
+block = f.read(256)
+while block != '':
+    process(block)
+    block = f.read(256)
+
+
+
+Positional-only parameters
+==========================
+https://docs.python.org/3.8/whatsnew/3.8.html#positional-only-parameters
+
+Just to know that there is such a thing.
+It is not Pythonic, it is a step backward.
+Simulates C language style, while they added Pythonic named arguments to C++ ...
+
+
+
+Debug and self-documenting f-string
+===================================
+https://docs.python.org/3.8/whatsnew/3.8.html#f-strings-support-for-self-documenting-expressions-and-debugging
+
+print(f'name = {name}')
+== >
+print(f'{name=}')
+
+As this shortcut created for debug purposes, it will print the __repr__() value of the object
+and not the __str__() value.
+
+now = datetime.datetime.now()
+print(f'{now=} {now=!s}')
+now=datetime.datetime(2019, 7, 16, 16, 58, 0, 680222) now=2019-07-16 16:58:00.680222
+
+But as the above example shows, we can use the !s modifier to print the __str__() value
+The !f modifier can be used to access format parameters:
+
+print(f'{math.pi=!f:.2f}')  # math.pi=3.14
+
+My opinion: as usage of f-string now replaces all other
+string interpolation methods, it will change in time:
+will print __str__() by default
+
+
+
+Others
+======
+
+json.tool
+https://docs.python.org/3/library/json.html#module-json.tool
+Add option --json-lines to parse every input line as separate JSON object.
+
+Added new function math.dist() for computing Euclidean distance between two points
+
+Added new function, math.prod(), as analogous function to sum()
+that returns the product of a ‘start’ value (default: 1) times an iterable of numbers
+
+Added new multiprocessing.shared_memory module
+
+shutil.copytree() now accepts a new dirs_exist_ok keyword argument
+
+shutil.copytree() now accepts a new dirs_exist_ok keyword argument
+
+Added statistics.geometric_mean()
+
+Added statistics.multimode() that returns a list of the most common values
+
+Added statistics.quantiles() that divides data or a distribution in to
+equiprobable intervals (e.g. quartiles, deciles, or percentiles)
+
+
+Sped-up field lookups in collections.namedtuple().
+They are now more than two times faster,
+making them the fastest form of instance variable lookup in Python

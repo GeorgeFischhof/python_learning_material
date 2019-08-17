@@ -1,0 +1,39 @@
+
+Type hinting on next level
+===============================================
+https://docs.python.org/3.7/library/typing.html
+
+from typing import List
+
+Vector = List[float]
+
+def scale(scalar: float, vector: Vector) -> Vector:
+    return [scalar * num for num in vector]
+
+
+
+os.scandir() function – a better and faster directory iterator
+==============================================================
+https://docs.python.org/3.7/library/os.html#os.scandir
+
+with os.scandir(path) as it:
+    for entry in it:
+        if not entry.name.startswith('.') and entry.is_file():
+            print(entry.name)
+
+
+
+math.isclose() and cmath.isclose() functions
+which tell whether two values are approximately equal or “close” to each other
+==============================================================================
+https://docs.python.org/3.5/library/math.html#math.isclose
+
+math.isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0)
+Return True if the values a and b are close to each other and False otherwise
+
+
+
+zipapp module nad command line tool to create an app in one zip file
+====================================================================
+https://www.python.org/dev/peps/pep-0441/
+https://docs.python.org/3.7/library/zipapp.html
