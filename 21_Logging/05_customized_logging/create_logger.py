@@ -1,5 +1,5 @@
 
-import atexit
+# import atexit  # needed before Python 3.8
 import logging
 
 
@@ -21,6 +21,7 @@ def create_logger(name, debug=False):
 
     logger.addHandler(log_file_handler)
 
-    atexit.register(logging.shutdown)
+    # atexit.register(logging.shutdown)  # needed before Python 3.8
+    # https://docs.python.org/3.8/library/logging.html#logging.shutdown
 
     return logger
