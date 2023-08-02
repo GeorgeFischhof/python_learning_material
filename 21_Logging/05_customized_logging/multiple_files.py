@@ -1,5 +1,5 @@
 
-import atexit
+# import atexit  # from Python 3.8 logging.shutdown is automatic
 import logging
 
 
@@ -37,6 +37,6 @@ def create_multiple_file_logger(name):
     logger.addHandler(log_file_warning_handler)
     logger.addHandler(log_file_error_handler)
 
-    atexit.register(logging.shutdown)
+    # atexit.register(logging.shutdown)  # from Python 3.8 logging.shutdown is automatic
 
     return logger
