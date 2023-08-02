@@ -1,5 +1,5 @@
 
-import atexit
+# import atexit  # from Python 3.8 logging.shutdown is automatic
 import logging
 
 import sub_module
@@ -20,7 +20,7 @@ def create_logger():
     module_logger.setLevel(logging.INFO)
     module_logger.addHandler(log_console_handler)
 
-    atexit.register(logging.shutdown)
+    # atexit.register(logging.shutdown)  # from Python 3.8 logging.shutdown is automatic
 
     return module_logger
 
@@ -38,6 +38,3 @@ def do_logging():
 if __name__ == '__main__':
     logger = create_logger()
     do_logging()
-
-
-
