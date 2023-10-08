@@ -1,0 +1,4 @@
+Typing
+======
+
+NotRequired used in TypedDict to annotate optional key
