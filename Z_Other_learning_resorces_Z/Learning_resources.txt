@@ -1,0 +1,259 @@
+
+You can download Python to your home PC from python.org, you should choose the 64 bit version
+
+https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
+
+ 
+
+The best development environment: JetBrains PyCharm, community edition is enough:
+
+https://www.jetbrains.com/pycharm/download/#section=windows
+
+https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
+
+https://realpython.com/pycharm-guide/
+  
+
+You can install Python into c:\python38 folder, pay attention to install pip (checkbox must be checked in)
+
+
+My learning material
+
+https://bitbucket.org/GeorgeFischhof/python_learning_material_by_george/src/master/
+
+Links to learn from web
+
+Socratica
+https://www.youtube.com/watch?v=bY6m6_IIN94&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-
+
+ 
+pythonprogramming.net - hands on, basics are boring ;-)
+https://www.youtube.com/watch?v=eXBD2bB9-RA&list=PLQVvvaa0QuDeAams7fkdcwOGBpGdHpXln
+
+ 
+
+https://www.pythontutorial.net/
+contains quite good stuff
+
+ 
+
+Ask Python
+
+http://askpython.com/
+
+ 
+
+Learn Python
+
+https://www.programiz.com/python-programming
+
+ 
+
+Learn Python
+
+http://anandology.com/python-practice-book/index.html
+
+ 
+
+The Hitchhiker's Guide to Python!
+
+http://docs.python-guide.org/en/latest/
+
+ 
+
+Python Cookbook, Third Edition
+
+http://chimera.labs.oreilly.com/books/1230000000393
+
+ 
+
+Dive into Python 3
+
+http://www.diveintopython3.net/
+
+ 
+
+Using named tuples
+
+https://dbader.org/blog/writing-clean-python-with-namedtuples
+
+ 
+Python 3 Module of the Week - very good articles about the standard library
+
+https://pymotw.com/3/
+
+ 
+
+All the Dan Bader blog
+
+https://dbader.org/blog/
+
+ 
+
+and Real Python tutorials
+
+https://realpython.com/
+
+
+
+
+
+
+
+
+
+
+
+===================================================================
+new stuff 2021
+
+https://cscx.org/
+
+
+Python cheat sheets
+https://www.pythonsheets.com/
+
+https://cheatsheets.tutorials24x7.com/programming/python
+
+https://cheatography.com/tag/python/
+
+https://realpython.com/python-data-structures/
+
+Python kezdokenek magyarul - nagyon jonak tunik !!!
+https://www.youtube.com/watch?v=kr-pmSBeKzM&list=PLQCrW4xBBP-RfuKcB9kSPXyyzgEdZSDon
+
+ez is eleg jo, de meg hallgatni kell egy kicsit
+https://www.youtube.com/playlist?list=PLUnQJ5ZQoqQJT_sSKYFRu8vP6vJxdo3OZ
+
+ebbol a halado:
+https://www.youtube.com/playlist?list=PLUnQJ5ZQoqQIq2vYAe31dgdvOnVhTBmrE
+
+
+
+import (RP)
+https://realpython.com/python-import/
+
+threading (RP)
+https://realpython.com/intro-to-python-threading/
+
+python scopes
+https://realpython.com/python-scope-legb-rule/
+
+
+Hogyan gondolkozz úgy, mint egyinformatikus:Tanulás Python 3 segítségével
+https://mtmi.unideb.hu/pluginfile.php/554/mod_resource/content/3/thinkcspy3.pdf
+https://buildmedia.readthedocs.org/media/pdf/howtothink/latest/howtothink.pdf
+
+
+https://pythonsheets.com/
+
+
+
+(2021.11)
+
+Tech with Tim series
+https://www.youtube.com/c/TechWithTim/playlists
+
+Beginner
+https://www.youtube.com/watch?v=OFrLs22MDAw&list=PLzMcBGfZo4-mFu00qxl0a67RhjjZj3jXm
+(?? meg kell nezni mennyire jo... elsore nem biztos)
+
+Classes and objects
+https://www.youtube.com/watch?v=v_Jp11xqCzg&list=PLzMcBGfZo4-l1MqB1zoYfqzlj_HH-ZzXt
+(?? belenezni)
+
+Intermediate - igazabol inkabb kiterjesztett beginner
+https://www.youtube.com/watch?v=0VdzZQdaZ28&list=PLzMcBGfZo4-nhWva-6OVh1yKWHBs4o_tv
+(?? belenezni)
+
+Expert Python Tutorial 
+https://www.youtube.com/watch?v=mclfteWlT2Q&list=PLzMcBGfZo4-kwmIcMDdXSuy_wSqtU-xDP
+(van benne decorator, generator, inkabb advanced...)
+
+
+
+Beginner
+25 nooby Python habits you need to ditch
+https://www.youtube.com/watch?v=qUeud6DvOWI
+https://docs.microsoft.com/hu-hu/learn/paths/python-first-steps/
+https://sulipy.hu/
+https://data-flair.training/python-course/
+
+
+FELADATOK
+---------
+
+https://www.geeksforgeeks.org/perfect-number/
+https://www.interviewbit.com/problems/
+
+
+
+TDD
+---
+Atesz ;)
+https://www.youtube.com/watch?v=fkrpMLzxWOo
+
+
+
+gyakorlo oldalak
+----------------
+hackerrank
+codechef
+hackerearth
+https://www.w3resource.com/python-exercises/
+
+
+Python patterns
+---------------
+https://github.com/faif/python-patterns
+https://www.toptal.com/python/python-design-patterns
+
+
+Beginner RP
+https://realpython.com/python-first-steps/
+https://realpython.com/python-itertools/
+https://realpython.com/python-dicts/
+
+
+Logging
+https://realpython.com/python-logging/
+https://docs.python.org/3/library/logging.html
+https://docs.python.org/3/howto/logging-cookbook.html
+https://docs.python-guide.org/writing/logging/
+https://www.loggly.com/ultimate-guide/python-logging-basics/
+
+import
+https://realpython.com/absolute-vs-relative-python-imports/
+
+requests
+https://realpython.com/python-requests/
+
+files
+https://realpython.com/working-with-files-in-python/
+https://realpython.com/read-write-files-python/
+
+for loops
+https://realpython.com/python-for-loop/
+
+super()
+https://realpython.com/python-super/
+
+how to run script
+https://realpython.com/run-python-scripts/
+
+https://realpython.com/python-refactoring/
+
+https://realpython.com/intro-to-python-threading/
+
+https://www.marsja.se/python-data-visualization-techniques-you-should-learn-seaborn/
+
+OOP
+https://realpython.com/inheritance-composition-python/
+
+
+Python programozás kezdőknek
+https://www.youtube.com/playlist?list=PLUnQJ5ZQoqQJT_sSKYFRu8vP6vJxdo3OZ
+
+working with files
+https://realpython.com/working-with-files-in-python/#listing-subdirectories
+
