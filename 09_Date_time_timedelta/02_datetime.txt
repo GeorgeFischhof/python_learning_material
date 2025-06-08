@@ -94,6 +94,9 @@ Format strings
 --------------
 https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
 
+f-string can format datetime values without strftime:
+print(f"{date.today():%Y-%m-%d}")
+
 
 Construct a datetime object
 ===========================
