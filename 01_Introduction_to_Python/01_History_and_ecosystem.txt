@@ -45,7 +45,7 @@ functions, libraries publicly available into Python Package Index:
 
 https://pypi.org/
 
-Right now the index contains more than 176 000 packages. (continuously growing)
+Right now the index contains more than 704 000 packages. (continuously growing)
 
 And because it is open source the Python language itself is developed
 according to needs of the users.
