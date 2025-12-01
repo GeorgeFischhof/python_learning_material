@@ -19,14 +19,14 @@ virtual environments and tools
    - space
    - accented or special characters
 
-<details>
+<details open>
 <summary>If you <b>don't know</b> how to use git</summary>
 
 2. download and unzip the repo from [George Python learning material](https://github.com/GeorgeFischhof/python_learning_material)
    push the green <>Code button, and from the dropdown menu push "Download ZIP"
 </details>
 
-<details open>
+<details>
 <summary>If you <b>know</b> how to use Git</summary>
 
 2. install git from the official git-scm.com
