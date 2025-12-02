@@ -1,0 +1,224 @@
+[project.urls]
+Homepage = "https://github.dev/GeorgeFischhof/python_learning_material"
+Documentation = "https://github.com/GeorgeFischhof/python_learning_material/blob/master/00_Install_Python_environment/README.md"
+Repository = "https://github.com/GeorgeFischhof/python_learning_material.git"
+Issues = "https://github.com/GeorgeFischhof/python_learning_material/issues"
+Changelog = "https://github.com/GeorgeFischhof/python_learning_material/blob/master/Changes.md"
+
+[project]
+name = "learn_python"
+version = "2.2.0"
+description = "Python learning material, and learning environment using modern stuff, for example UV"
+authors = [
+    { name = "George Fischhof", email = "george@fischhof.hu" },
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+
+
+##########################################
+# Dependencies
+##########################################
+
+dependencies = [
+    #    "confz>=2.0.1",
+    "loguru>=0.7.3",
+    "pydantic>=2.11.7",
+    #    "pydantic-extra-types>=2.10.5",  # language, country, semver ...
+    "pytest>=8.4.1",
+    "pytest-assume>=2.4.3",
+    #    "retry2>=0.9.5",
+    #    "faker>=37.5.3",
+    #    "whenever>=0.8.8",  # latest datetime lib solving datetime pitfalls
+]
+
+
+[dependency-groups]
+api_test = [
+#    "datamodel-code-generator>=0.30.1", # create pydantic model from openapi spec
+    "niquests>=3.15.2",
+    # Passed data will be converted to form-data if headers have a Content-Type header and is set to multipart/form-data
+    # # https://hub.docker.com/r/openapitools/openapi-generator-cli  # generates models, clients, servers
+]
+
+database = [
+    #    "psycopg>=3.2.6",  # postgresql
+    #    "SQLAlchemy>=2.0.41",
+    #    "sqlmodel>=0.0.24",  #  SQLAlchemy plus pydantic by Tiangolo
+]
+
+dev = [
+#    "black>=25.1.0",
+    "complexipy>=4.0.2",
+    "ruff>=0.12.11",
+]
+
+github = [
+#    "PyGithub>=2.6.1",  # the official one
+#    "github-projectv2>=0.7.31",  # seems to be easy for projects
+#    "GitHubKit>=0.13.0", # it says it is an all batteries included SDK
+    # need to try in live
+]
+
+json_schema = [
+#    "jsonschema>=4.25.0",  # validates JSON against schema, knows the new versions, Pydantic does not have this
+#    "jsonpath-ng>=1.7.0",  # said and seems to be good, another: python-jsonpath it knows JSON patch too
+    # unfortunately if several nodes are queried from several records, they are returned in good order, but separatly
+    # so if one is missing data flow is mixed up; knows "anywhere in the tree"
+
+    #    "jmespath>=1.0.1"  # does not know "anywhere in the tree", but good query stuff,
+    # returns objects, preserving the original structure, also can return in zip-like way
+
+    #    "hypothesis-jsonschema>=0.23.1",  # generates JSON data matches the schema
+
+    # meta schemas can be found: https://json-schema.org/draft/2020-12,
+    # metaschemas can be used to check the schema we have
+]
+
+markdown = [
+    "markdown>=3.8.2",
+    # mermaid cli: https://github.com/mermaid-js/mermaid-cli
+    # offline editor: https://mermaid.live
+    # workflow:
+    # 1. create md with png image links (manually svg can be added to word, but pandoc can not)
+    # 2. use pandoc to create word
+]
+
+notification_sending = [
+    #    "pymsteams>=0.2.5",
+]
+
+oauth_stuff = [
+    #    "python-keycloak>=4.0.0",
+    #    "requests_oauth2client>=1.5.3",
+]
+
+openapi_test = [
+    #    "openapi3>=1.8.2", # Validator and client
+    #    "openapi-spec-validator>=0.7.2", # The validator aims to check for full compliance with the Specification
+    #    "schemathesis>=4.0.22",  # need to separate it: uses old pytest hook, pytest does not like that...
+    # openapi generator - creates models clients, servers: https://github.com/OpenAPITools/openapi-generator
+]
+
+perf_test = [
+    #    "locust>=2.38.0",
+]
+
+test_report = [
+    #    "allure-pytest>=2.15.0",
+    "pytest-html>=4.1.1",
+    #    "pytest-md-report>=0.7.0",
+]
+
+web_ui_test = [
+    #    "playwright>=1.51.0",
+    #    "pytest-playwright>=0.7.0",
+]
+
+web_server = [
+    "fastapi>=0.116.1",
+    "uvicorn>=0.35.0",
+#    "fastapi-code-generator>=0.5.4",  # generates fastapi from openapi, good for mocking
+]
+
+[project.optional-dependencies]
+#    postgre = ["binary", "pool"]
+#    web_server = ["standard"]
+
+
+##########################################
+# Linters config
+##########################################
+
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+exclude = [".*/"]  # hidden folders, for example .venv
+
+
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+select = ["C901", "E4", "E7", "E9", "F", "W"]
+ignore = ["PLR0904"]  # too-many-public-methods
+
+
+##########################################
+# Tools config
+##########################################
+
+[tool.datamodel-codegen]
+#input = "src/models/registry-index.schema.json"
+#input-file-type = "jsonschema"
+#output = "src/models/registry_index.py"
+#output-model-type = "pydantic_v2.BaseModel"
+
+input = "QA_Docs/openapi/registry-openapi.yaml"
+input-file-type = "openapi"
+output = "QA_Docs/openapi/generated_models/generated_models_20250605.py"
+output-model-type = "pydantic_v2.BaseModel"
+
+disable-appending-item-suffix = true
+field-constraints = true
+reuse-model = true
+snake-case-field = true
+strict-nullable = true
+target-python-version = "3.13"
+use-default-kwarg = true
+use-double-quotes = true
+use-standard-collections = true
+use-subclass-enum = true
+
+# command:
+# uv run datamodel-codegen
+
+[tool.uv]
+default-groups = "all"
+allow-insecure-host = ["pypi.org", "files.pythonhosted.org"]  # if there is problem with cert...
+
+##########################################
+# PyTest config
+##########################################
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_level = "INFO"
+#log_level = "DEBUG"
+#log_cli_level = "DEBUG"
+log_format = "%(asctime)s | %(levelname)s | %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli_format = "%(asctime)s | %(levelname)s | %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+#md_report = true
+#md_report_tee = true
+#md_report_output = "test_result.md"
+render_collapsed = "all"  # pytest-html - all is collapsed, just the statuses are shown
+
+pythonpath = "src"
+testpaths = ["src/tests"]
+
+addopts = "--keep-duplicates --strict-markers --html=/test_results/test_result.html --self-contained-html --junitxml=/test_results/test_result.xml"
+markers = [
+    # try out the test
+    "george",
+
+    # test execution type
+    "api",
+    "ui",
+
+    # speed and test type related
+    "slow: will run only with --runslow parameter",
+    "smoke",
+    "sanity",
+    "integration",
+    "regression",
+
+    # functions or modules of the product
+    "login",
+    "register",
+]

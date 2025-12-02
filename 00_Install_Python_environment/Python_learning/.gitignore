@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+
+# PyCharm
+.idea/
+
+# default HTML test result report
+test_result.html
+
+# default junit xml test result report
+test_result.xml
+
+# default md test result report
+test_result.md
