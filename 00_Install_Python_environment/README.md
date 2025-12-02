@@ -35,7 +35,9 @@ virtual environments and tools
    3. this will open the git credential manager. You have to log in.
 </details>
 
-3. Install Python and required packages (everything can be found in `pyproject.toml` file) <br/>
+3. in a terminal window (`cmd` or `powershell`) navigate to `00_Install_Python_environment/Python_learning` folder
+   
+4. Install Python and required packages (everything can be found in `pyproject.toml` file) <br/>
    **Command:** `uv sync` <br/>
    Notes
    1. Astral (the creator of uv) maintains a Python repository, and uv will install Python form that repository
@@ -48,7 +50,8 @@ virtual environments and tools
    URL: https://www.jetbrains.com/pycharm/download/?section=windows
    During the installation, there is a checkbox "Add bin folder to the path", **check it in** <br/>
    it will be good for example to call the diff form command line
-2. After install select "Open" and select the folder where you have the Python learning stuff (the content of the repo)
+2. After install select "Open" and select the `00_Install_Python_environment/Python_learning` folder
+   Note: add your files into `src` folder (that is a usually used folder for source code)
 
 
 
