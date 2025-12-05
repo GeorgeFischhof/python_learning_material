@@ -2,11 +2,6 @@
 
 # Syntax
 
-A Python program is built from three primary building blocks: sequence, conditional and loop.
-
-Blocks (conditions, loops, function definitions, with statements, classes) are introduced with a
-colon `:` and the following lines must be indented (conventionally 4 spaces) to form the block.
-
 A program consists of the following building blocks:
 
 - sequence (of steps)
