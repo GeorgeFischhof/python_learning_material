@@ -34,8 +34,10 @@ and **Dropbox**, and served as Python’s **“Benevolent dictator for life” (
 The **Python Software Foundation (PSF)** exists to **promote, protect, and advance** the Python programming language and
 to support a **diverse international community** of Python programmers. 
 
-You can donate to the PSF and view donation
-information on the official site: <https://www.python.org/psf/> and <https://www.python.org/psf/donations/>
+You can donate to the PSF
+information on the official site: <https://donate.python.org/> <https://www.python.org/psf/>
+
+![I donated to PSF](../Images/PSF_I_Donated_280.png "I donated to PSF")
 
 ---
 
