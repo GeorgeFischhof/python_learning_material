@@ -53,20 +53,19 @@ virtual environments and tools
 2. After install select "Open" and select the `00_Install_Python_environment/Python_learning` folder
    Note: add your files into `src` folder (that is a usually used folder for source code)
 
+**Registration and Sync**
 
-**Regisztráció és sync**
+It's recommended to register on the JetBrains website. 
+Configure file synchronization in the settings to sync everything: 
+File → Manage IDE Settings → Backup and Sync
 
-Érdemes regisztrálni kell a jetbrains oldalán
-Beállítani a file settings-ben hogy szinkronizáljon mindent
-File -> Manage IDE Settings -> Backup and Sync
+**Settings**
 
-**Beállítások**
+Start with this setting: 
+File → Settings → Editor → Inspections. 
+Search for "shadow" and increase these from "weak warning" to "warning" 
+(to make them more visible).
 
-Érdemes ezzel a beállítással kezdeni:
-File -> Settings
-Editor -> Inspection
-Rákeresni hogy "shadow"
-Ezeket "weak warning"-ról felemelni "warning"-ra
-(azért hogy látható legyen)
+**Use CamelHumps**
 
-Settings -> smart keys -> "Use CamelHumps Words"
+Settings → Smart Keys → "Use CamelHumps Words"
