@@ -54,4 +54,19 @@ virtual environments and tools
    Note: add your files into `src` folder (that is a usually used folder for source code)
 
 
+**Regisztráció és sync**
 
+Érdemes regisztrálni kell a jetbrains oldalán
+Beállítani a file settings-ben hogy szinkronizáljon mindent
+File -> Manage IDE Settings -> Backup and Sync
+
+**Beállítások**
+
+Érdemes ezzel a beállítással kezdeni:
+File -> Settings
+Editor -> Inspection
+Rákeresni hogy "shadow"
+Ezeket "weak warning"-ról felemelni "warning"-ra
+(azért hogy látható legyen)
+
+Settings -> smart keys -> "Use CamelHumps Words"
