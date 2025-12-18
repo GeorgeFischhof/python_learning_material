@@ -14,3 +14,9 @@
 - add pyproject.toml - project config file
 
 ## Older verions are not tracked ...
+
+## Version 2.0.0 - Date 2019
+
+## Version 1.0.0 - Date 2017
+
+
