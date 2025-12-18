@@ -47,26 +47,28 @@ virtual environments and tools
 ## Install and setup IDE (Integrated Development Environment)
 
 1. Download and install PyCharm <br/>
-   URL: https://www.jetbrains.com/pycharm/download/?section=windows
+   URL: https://www.jetbrains.com/pycharm/download/?section=windows <br/>
    During the installation, there is a checkbox "Add bin folder to the path", **check it in** <br/>
    it will be good for example to call the diff form command line
-2. After install select "Open" and select the `00_Install_Python_environment/Python_learning` folder
+2. After install select "Open" and select the `00_Install_Python_environment/Python_learning` folder <br/>
    Note: add your files into `src` folder (that is a usually used folder for source code)
 
+**Registration and Sync**
 
-**Regisztráció és sync**
-
-Érdemes regisztrálni kell a jetbrains oldalán
-Beállítani a file settings-ben hogy szinkronizáljon mindent
+It's recommended to register on the JetBrains website. <br/>
+Configure file synchronization in the settings to sync everything: <br/>
 File -> Manage IDE Settings -> Backup and Sync
 
-**Beállítások**
+**Settings**
 
-Érdemes ezzel a beállítással kezdeni:
-File -> Settings
-Editor -> Inspection
-Rákeresni hogy "shadow"
-Ezeket "weak warning"-ról felemelni "warning"-ra
-(azért hogy látható legyen)
+Start with this setting: <br/>
+File → Settings → Editor → Inspections <br/>
+Search for **shadow** and increase these from "weak warning" to "warning" <br/>
+(to make them more visible)
 
-Settings -> smart keys -> "Use CamelHumps Words"
+**Use CamelHumps**
+
+Settings -> Smart Keys -> "Use CamelHumps Words" <br/>
+this setting controls the behavior of CTRL+left arrow, CTRL+right arrow shortcuts:
+if set then PyCharm will jump by words, stops at underscores between words
+
