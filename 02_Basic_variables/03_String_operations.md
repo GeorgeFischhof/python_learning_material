@@ -13,13 +13,15 @@ prefixes to look for. With optional start,
 test string beginning at that position.
 With optional end, stop comparing string at that position
 
+
  - `str.endswith(suffix[, start[, end]])` <br/>
 Return True if the string ends with the specified suffix,
 otherwise return False. 
 
-suffix can also be a tuple of suffixes to look for.
+   suffix can also be a tuple of suffixes to look for.
 With optional start, test beginning at that position.
 With optional end, stop comparing at that position.
+
 
 - `str.find(sub[, start[, end]])` <br/>
 Return the lowest index in the string where substring
@@ -27,7 +29,7 @@ sub is found within the slice s[start:end].
 Optional arguments start and end are interpreted as
 in slice notation. Return -1 if sub is not found.
 
-Note: The find() method should be used only if you
+  Note: The find() method should be used only if you
 need to know the position of sub.
 To check if sub is a substring or not, use the in operator:
 'Py' in 'Python' ==> True
@@ -48,28 +50,28 @@ The string on which this method is called
 can contain literal text or replacement
 fields delimited by braces {}
 
-```python
-print("The sum of 1 + 2 is {0}".format(1+2))
-# ==> "The sum of 1 + 2 is 3"
-```
+  ```python
+  print("The sum of 1 + 2 is {0}".format(1+2))
+  # ==> "The sum of 1 + 2 is 3"
+  ```
 
-```python
-number = 5
-print('I have {number} apples'.format(number=number))
-# ==> 'I have 5 apples'
-```
+  ```python
+  number = 5
+  print('I have {number} apples'.format(number=number))
+  # ==> 'I have 5 apples'
+  ```
 
-See Format String Syntax for a description of the
+  See Format String Syntax for a description of the
 various formatting options that can be specified
 in format strings.
 <https://docs.python.org/3.7/library/string.html#formatstrings>
 
-From 3.6 there is f-string, which implements format:
-```python
-number = 5
-print(f'I have {number} apples')
-# ==> I have 5 apples
-```
+  From 3.6 there is f-string, which implements format:
+  ```python
+  number = 5
+  print(f'I have {number} apples')
+  # ==> I have 5 apples
+  ```
 
 
 - `str.join(iterable)` <br/>
@@ -77,11 +79,11 @@ Return a string which is the concatenation
 of the strings in iterable,
 and the the separator will be str
 
-```python
-print(''.join(('1', '2', '3')))  # ==> '123'
-print('a'.join(('1', '2', '3')))  # ==> '1a2a3'
-print('X '.join('apple')  # ==> 'aX pX pX lX e'
-```
+  ```python
+  print(''.join(('1', '2', '3')))  # ==> '123'
+  print('a'.join(('1', '2', '3')))  # ==> '1a2a3'
+  print('X '.join('apple')  # ==> 'aX pX pX lX e'
+  ```
 
 - `str.replace(old, new[, count])` <br/>
 Return a copy of the string with all occurrences of
@@ -98,6 +100,7 @@ Padding is done using the specified fillchar
 (default is an ASCII space).
 The original string is returned if width is
 less than or equal to len(s)
+ 
 
 - `str.ljust(width[, fillchar])` <br/>
 Return the string left justified in a string
@@ -106,12 +109,14 @@ specified fillchar (default is an ASCII space)
 The original string is returned if width is
 less than or equal to len(s).
 
+
 - `str.rjust(width[, fillchar])` <br/>
 Return the string right justified in a string
 of length width. Padding is done using the
 specified fillchar (default is an ASCII
 space). The original string is returned
 if width is less than or equal to len(s).
+
 
 - `str.zfill(width)` <br/>
 Return a copy of the string left filled
@@ -124,7 +129,7 @@ with ASCII '0' digits to make a string of length width
 Return a copy of the string with all the cased
 characters [4] converted to lowercase.
 
-The lowercasing algorithm used is described in
+  The lowercasing algorithm used is described in
 section 3.13 of the Unicode Standard.
 
 
@@ -167,7 +172,6 @@ versa. Note that it is not necessarily true
 that s.swapcase().swapcase() == s.
 
 
-
 ## Remove characters
 
 - `str.lstrip([chars])` <br/>
@@ -190,7 +194,6 @@ trailing characters removed. The chars argument
 is a string specifying the set of characters
 to be removed. If omitted or None, the chars
 argument defaults to removing whitespace.
-
 
 
 ## Splitting by delimiters
@@ -255,7 +258,7 @@ false otherwise
 Return true if the string is a valid identifier
 according to the language definition
 
-Note: Use keyword.iskeyword() to test for
+  Note: Use keyword.iskeyword() to test for
 reserved identifiers such as def and class
 
 
