@@ -1,15 +1,14 @@
 
-Slicing
-=======
+# Slicing
 
-Get one part of a string by index
-Possibility to get characters with given steps
-Sometimes called extended indexing
+- Get one part of a string by index
+- Possibility to get characters with given steps
+- Sometimes called extended indexing
 
 It works with lists too.
 
 
-syntax
+## syntax
 ------
 str[start:stop:step]
 
