@@ -1,7 +1,7 @@
 
 # String operations (string methods)
 
-<https://docs.python.org/3.7/library/stdtypes.html#string-methods>
+<https://docs.python.org/3.14/library/stdtypes.html#string-methods>
 
 
 ## Search and find related methods
@@ -19,14 +19,14 @@ Return True if the string ends with the specified suffix,
 otherwise return False. 
 
    suffix can also be a tuple of suffixes to look for.
-With optional start, test beginning at that position.
-With optional end, stop comparing at that position.
+With optional `start`, test beginning at that position.
+With optional `end`, stop comparing at that position.
 
 
 - `str.find(sub[, start[, end]])` <br/>
 Return the lowest index in the string where substring
 sub is found within the slice s[start:end].
-Optional arguments start and end are interpreted as
+Optional arguments `start` and `end` are interpreted as
 in slice notation. Return -1 if sub is not found.
 
   Note: The find() method should be used only if you
@@ -36,8 +36,8 @@ To check if sub is a substring or not, use the in operator:
 
 - `str.rfind(sub[, start[, end]])` <br/>
 Return the highest index in the string where substring
-sub is found, such that sub is contained within
-s[start:end]. Optional arguments start and end
+`sub` is found, such that `sub` is contained within
+s[start:end]. Optional arguments `start` and `end`
 are interpreted as in slice notation. Return -1 on failure
 
 
@@ -52,13 +52,13 @@ fields delimited by braces {}
 
   ```python
   print("The sum of 1 + 2 is {0}".format(1+2))
-  # ==> "The sum of 1 + 2 is 3"
+  # ==> The sum of 1 + 2 is 3
   ```
 
   ```python
   number = 5
-  print('I have {number} apples'.format(number=number))
-  # ==> 'I have 5 apples'
+  print("I have {number} apples".format(number=number))
+  # ==> I have 5 apples
   ```
 
   See Format String Syntax for a description of the
@@ -69,7 +69,7 @@ in format strings.
   From 3.6 there is f-string, which implements format:
   ```python
   number = 5
-  print(f'I have {number} apples')
+  print(f"I have {number} apples")
   # ==> I have 5 apples
   ```
 
@@ -80,9 +80,9 @@ of the strings in iterable,
 and the the separator will be str
 
   ```python
-  print(''.join(('1', '2', '3')))  # ==> '123'
-  print('a'.join(('1', '2', '3')))  # ==> '1a2a3'
-  print('X '.join('apple')  # ==> 'aX pX pX lX e'
+  print("".join(("1", "2", "3")))  # ==> "123"
+  print("a".join(("1", "2", "3")))  # ==> "1a2a3"
+  print("X ".join("apple"))  # ==> "aX pX pX lX e"
   ```
 
 - `str.replace(old, new[, count])` <br/>
@@ -127,7 +127,7 @@ with ASCII '0' digits to make a string of length width
 
 - `str.lower()` <br/>
 Return a copy of the string with all the cased
-characters [4] converted to lowercase.
+characters converted to lowercase.
 
   The lowercasing algorithm used is described in
 section 3.13 of the Unicode Standard.
@@ -135,7 +135,7 @@ section 3.13 of the Unicode Standard.
 
 - `str.upper()` <br/>
 Return a copy of the string with all the cased
-characters [4] converted to uppercase. Note
+characters converted to uppercase. Note
 that s.upper().isupper() might be False
 if s contains uncased characters
 
