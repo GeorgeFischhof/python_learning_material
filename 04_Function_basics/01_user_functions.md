@@ -1,0 +1,45 @@
+# User functions
+
+Functions are a convenient way to divide your code into useful blocks.  
+Functions are small parts of repeatable and reusable code.
+
+A function can accept parameters listed in parentheses and can return values.
+
+A function definition has the following parts:
+
+- `def` keyword  
+- name of the function  
+- parameters in parentheses (optional)  
+- colon, as this indicates a code block  
+- return value(s) (optional)
+
+A function in Python must have at least one instruction.  
+If there is no instruction, the  
+`pass`  
+instruction must be used, which does nothing.
+
+```python
+def do_nothing():
+    pass
+```
+
+When a function is only defined, it will do nothing —  
+it must be called to do its job.
+
+## example
+
+```python
+def add_numbers(number_1, number_2):
+    sum_numbers = number_1 + number_2
+    return sum_numbers
+
+print(add_numbers(2, 3))
+print(add_numbers(number_1=3, number_2=4))
+```
+
+If the function has no explicit return value,  
+Python will add `None` implicitly, so the function will return `None`.
+
+The  
+`return`  
+statement is used to return — give back — value(s).
