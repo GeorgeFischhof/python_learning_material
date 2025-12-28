@@ -1,84 +1,66 @@
+# Error, exception handling
 
-Error, exception handling
-=========================
-
-built-in exceptions
+built-in exceptions <br/>
 https://docs.python.org/3/library/exceptions.html
 
-user defined exceptions
+user defined exceptions <br/>
 https://docs.python.org/3/tutorial/errors.html#tut-userexceptions
 
 https://realpython.com/python-exceptions/
 
+# Syntax
 
-Syntax
-------
-
+```python
 try:
    # do something
-   pass
 
 except ValueError:
    # handle ValueError exception
-   pass
 
 except (TypeError, ZeroDivisionError):
    # handle multiple exceptions
    # TypeError and ZeroDivisionError
-   pass
 
 except:
    # handle all other exceptions
-   pass
 
 else:
     # if the try clause does not raise an exception
-    pass
 
 finally:
     # A finally clause is always executed before leaving the try statement,
     # whether an exception has occurred or not.
-    pass
+```
 
+# Raising user defined exception
 
+Programs may name their own exceptions by creating a new exception class.<br/>
+Exceptions should typically be derived from the `Exception` class, either directly or indirectly.
 
-Raising user defined exception
-==============================
-
-Programs may name their own exceptions by creating a new exception class.
-Exceptions should typically be derived from the Exception class, either directly or indirectly.
-
-
+```python
 class MyException(Exception):
     pass
 
 def my_function():
     if something_happened():
-        raise MyException('Something happened')
+        raise MyException("Something happened")
+```
 
+# Processing exception information
 
+keywords:
+- `as` Assign the exception to a variable.
+- `raise` - `raise` without an exception raises the last exception
 
-Processing exception information
-================================
-
-as
---
-Assign the exception to a variable
-
-
-raise
------
-raise without a exception raises the last exception
-
-
-
+```python
 try:
-    with open('file.log') as file:
+    with open("file.log") as file:
         read_data = file.read()
 
 except FileNotFoundError as file_not_found_error:
     print(file_not_found_error)
 
 except:
-    print('Something happened, check the exception itself...')
+    print("Something happened, check the exception itself...")
     raise
+```
