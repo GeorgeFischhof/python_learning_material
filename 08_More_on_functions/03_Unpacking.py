@@ -1,4 +1,4 @@
-# TODO add text
+# TODO add text, mention when and why to use *args, **kwargs
 
 # Unpacking
 # =========
