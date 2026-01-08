@@ -14,14 +14,14 @@ class BankAccount:
 
 class MinimumBalanceAccount(BankAccount):
     def __init__(self, minimum_balance):
-        BankAccount.__init__(self)
+        super().__init__()
         self.minimum_balance = minimum_balance
 
     def withdraw(self, amount):
         if self.balance - amount < self.minimum_balance:
             print('Sorry, minimum balance must be maintained.')
         else:
-            BankAccount.withdraw(self, amount)
+            super().withdraw(amount)
 
 
 normal_account = BankAccount()
