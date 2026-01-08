@@ -1,33 +1,29 @@
+class Employee:
+    employees = list()  # one shared list for all instances
+    # class attribute, exist as a singleton, also can be accessed form instances
 
-class Demo:
-    class_attribute = 'class attribute'  # This is some constant-like stuff
+    def __init__(self, name: str):
+        self.name = name
 
-    def __init__(self, instance_attribute_external):
-        self.instance_attribute_external = instance_attribute_external  # instance attribute, value assigned at instantiation
-        self.instance_attribute_internal = 'internal'
-
-    def do_something(self):
-
-        print(self.class_attribute)  # the instance gets a pointer to class_attribute for reading
-        # ==> class attribute
-
-        print(self.instance_attribute_external)  # == > external
-        print(self.instance_attribute_internal)  # == > internal
-
-        self.instance_attribute_external = 'modified external'
-        self.instance_attribute_internal = 'modified internal'
-
-        print(self.instance_attribute_external)  # ==> 'modified external'
-        print(self.instance_attribute_internal)  # ==> 'modified internal'
+        # Instance delegates shared responsibility to the class
+        type(self).add_employee_to_list(name)
+        # type(self) is the current class without hardcoding it,
+        # this works correctly even if Employee is subclassed later
 
     @classmethod
-    def class_method(cls):
-        cls.class_attribute = 'modified class attribute'  # class methods can access class attributes
-        print(cls.class_attribute)  # ==> 'modified class attribute'
+    def add_employee_to_list(cls, name: str):
+        # We use a classmethod here because the list of employees belongs to the class,
+        # not to any single employee
+
+        cls.employees.append(name)
+        # 'cls' refers to the class (Employee) (convention only)
+        # This method modifies shared (class-level) state
 
 
-my_demo = Demo('external')
-my_demo.do_something()
-my_demo.class_method()
+alex = Employee("Alex")
+john = Employee("John")
 
-print(my_demo.class_attribute)  # ==> 'modified class attribute'  The instance can read it via the pointer
+print(f"{Employee.employees=}")
+print(f"{alex.employees=}")
+print(f"{john.employees=}")
+# All three refer to the same singleton list
