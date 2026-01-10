@@ -11,4 +11,4 @@ print(next(squares))  # the generator object can be called with "next"
 print(next(squares))
 print(next(squares))
 print()
-print('3 numbers will be enough now')
+print("3 numbers will be enough now")

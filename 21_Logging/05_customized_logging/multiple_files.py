@@ -4,7 +4,7 @@ import logging
 
 
 def create_handler(name, level, formatter):
-    log_file_handler = logging.FileHandler('{name}_{level}.log'.format(name=name, level=level), mode='w')
+    log_file_handler = logging.FileHandler("{name}_{level}.log".format(name=name, level=level), mode="w")
     log_file_handler.setLevel(level.upper())
     log_file_handler.setFormatter(formatter)
 
@@ -25,12 +25,12 @@ def create_multiple_file_logger(name):
     logger = logging.getLogger()  # without name we will get the root logger
     logger.setLevel(logging.NOTSET)
 
-    log_formatter = logging.Formatter('{asctime} - {module:20} - {levelname:8} - {message}', style='{')
+    log_formatter = logging.Formatter("{asctime} - {module:20} - {levelname:8} - {message}", style="{")
 
-    log_file_debug_handler = create_handler(name, 'debug', log_formatter)
-    log_file_info_handler = create_handler(name, 'info', log_formatter)
-    log_file_warning_handler = create_handler(name, 'warning', log_formatter)
-    log_file_error_handler = create_handler(name, 'error', log_formatter)
+    log_file_debug_handler = create_handler(name, "debug", log_formatter)
+    log_file_info_handler = create_handler(name, "info", log_formatter)
+    log_file_warning_handler = create_handler(name, "warning", log_formatter)
+    log_file_error_handler = create_handler(name, "error", log_formatter)
 
     logger.addHandler(log_file_debug_handler)
     logger.addHandler(log_file_info_handler)

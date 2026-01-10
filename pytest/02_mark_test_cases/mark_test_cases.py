@@ -12,12 +12,12 @@ def is_stored_correctly():
 
 @pytest.mark.frontend
 def test_something_is_blue():
-    pytest.assume(is_blue(), 'Message if not blue')
+    pytest.assume(is_blue(), "Message if not blue")
 
 
 @pytest.mark.backend
 def test_data_is_stored_correctly():
-    pytest.assume(is_stored_correctly(), 'Message for not storing correctly')
+    pytest.assume(is_stored_correctly(), "Message for not storing correctly")
 
 
 # Calling:
