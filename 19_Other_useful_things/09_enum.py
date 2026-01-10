@@ -15,21 +15,21 @@ class BugStatus(enum.Enum):
     fix_released = 1
 
 
-print('Member name: {}'.format(BugStatus.wont_fix.name))    # ==> wont_fix
-print('Member value: {}'.format(BugStatus.wont_fix.value))  # ==> 4
+print("Member name: {}".format(BugStatus.wont_fix.name))    # ==> wont_fix
+print("Member value: {}".format(BugStatus.wont_fix.value))  # ==> 4
 
 
 for status in BugStatus:
-    print('{:15} = {}'.format(status.name, status.value))
+    print("{:15} = {}".format(status.name, status.value))
 
 
 actual_state = BugStatus.wont_fix
 desired_state = BugStatus.fix_released
 
-print('Equality:',
+print("Equality:",
       actual_state == desired_state,       # ==> False
       actual_state == BugStatus.wont_fix)  # ==> True
-print('Identity:',
+print("Identity:",
       actual_state is desired_state,       # ==> False
       actual_state is BugStatus.wont_fix)  # ==> True
 
@@ -48,18 +48,18 @@ class BugStatusClass:
     fix_released = 1
 
 
-print('Member name: HAS NO NAME !!!')  # HAS NO NAME !!!
-print('Member value: {}'.format(BugStatusClass.wont_fix))  # ==> 4
+print("Member name: HAS NO NAME !!!")  # HAS NO NAME !!!
+print("Member value: {}".format(BugStatusClass.wont_fix))  # ==> 4
 
 # Iterating through is not possible
 
 actual_state = BugStatus.wont_fix
 desired_state = BugStatus.fix_released
 
-print('Equality:',
+print("Equality:",
       actual_state == desired_state,       # ==> False
       actual_state == BugStatus.wont_fix)  # ==> True
-print('Identity:',
+print("Identity:",
       actual_state is desired_state,       # DO NOT USE IT, NEVER EVER
       actual_state is BugStatus.wont_fix)  # DO NOT USE IT, NEVER EVER
 

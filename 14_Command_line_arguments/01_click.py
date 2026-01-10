@@ -22,7 +22,7 @@
 # or in script:
 #
 # import locale
-# locale.setlocale(locale.LC_ALL, 'UTF-8')
+# locale.setlocale(locale.LC_ALL, "UTF-8")
 
 # TODO add typer example
 

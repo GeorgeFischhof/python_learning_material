@@ -5,7 +5,7 @@
 # keys are elements of the list
 # values are the number of occurrences for each element
 
-'''
+"""
 
 collections.Counter([iterable-or-mapping])
 
@@ -27,27 +27,27 @@ Elements with equal counts are ordered arbitrarily
 subtract([iterable-or-mapping])
 Elements of the parameter are subtracted from original
 
-'''
+"""
 
 from collections import Counter
 
 colors = [
-    'red',
-    'red', 'blue',
-    'red', 'blue', 'green',
-    'red', 'blue', 'green', 'white',
-    'red', 'blue', 'green', 'white', 'black',
+    "red",
+    "red", "blue",
+    "red", "blue", "green",
+    "red", "blue", "green", "white",
+    "red", "blue", "green", "white", "black",
 ]
 
 number_of_colors = Counter(colors)
 
 print(number_of_colors)
-# Counter({'red': 5, 'blue': 4, 'green': 3, 'white': 2, 'black': 1})
+# Counter({"red": 5, "blue": 4, "green": 3, "white": 2, "black": 1})
 
 print(number_of_colors.most_common(3))
-# [('red', 5), ('blue', 4), ('green', 3)]
+# [("red", 5), ("blue", 4), ("green", 3)]
 
-decrease_colors = ['red', 'red']
+decrease_colors = ["red", "red"]
 number_of_colors.subtract(decrease_colors)
 print(number_of_colors)
-# Counter({'blue': 4, 'red': 3, 'green': 3, 'white': 2, 'black': 1})
+# Counter({"blue": 4, "red": 3, "green": 3, "white": 2, "black": 1})

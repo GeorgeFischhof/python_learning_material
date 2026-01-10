@@ -14,8 +14,8 @@
 
 input_characters  = "öüóőúéáűíÖÜÓŐÚÉÁŰÍ "
 output_characters = "ouooueauiouooueaui_"
-remove_characters = ',?;:.-§¬~+^!˘%°/˛=`(˙)´˝¨¸÷×$ß¤'
+remove_characters = ",?;:.-§¬~+^!˘%°/˛=`(˙)´˝¨¸÷×$ß¤"
 table = str.maketrans(input_characters, output_characters, remove_characters)
 
-print('Árvíztűrő tükörfúrógép'.translate(table))
-#  ==> 'arvizturo_tukorfurogep'
+print("Árvíztűrő tükörfúrógép".translate(table))
+#  ==> "arvizturo_tukorfurogep"
