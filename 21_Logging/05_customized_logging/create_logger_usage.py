@@ -7,7 +7,7 @@ def is_debug():
 
 
 def use_created_logger():
-    logger = create_logger.create_logger(name='Demo_create_logger', debug=is_debug())
+    logger = create_logger.create_logger(name="Demo_create_logger', debug=is_debug())
 
     logger.info('Info message')
     logger.debug('Debug message')

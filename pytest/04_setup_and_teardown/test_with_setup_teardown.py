@@ -12,36 +12,36 @@ import pytest
 
 
 def setup_module():
-    print('\n----------- setup_module ----------------\n')
+    print("\n----------- setup_module ----------------\n")
 
 
 def teardown_module():
-    print('\n----------- teardown_module -------------\n')
+    print("\n----------- teardown_module -------------\n")
 
 
 def setup_function():
-    print('\n------------- setup_function ------------------\n')
+    print("\n------------- setup_function ------------------\n")
 
 
 def teardown_function():
-    print('\n------------- teardown_function ---------------\n')
+    print("\n------------- teardown_function ---------------\n")
 
 
 # New style, but they can be combined
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def setup_function_type_a():
-    print('\n--------------- setup function type A -----------------\n')
+    print("\n--------------- setup function type A -----------------\n")
     yield
-    print('\n--------------- teardown function type A -----------------\n')
+    print("\n--------------- teardown function type A -----------------\n")
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def setup_function_type_b():
-    print('\n--------------- setup function type B -----------------\n')
+    print("\n--------------- setup function type B -----------------\n")
     yield
-    print('\n--------------- teardown function type B -----------------\n')
+    print("\n--------------- teardown function type B -----------------\n")
 
 
 ########################################################################
@@ -51,14 +51,14 @@ def setup_function_type_b():
 ########################################################################
 
 
-@pytest.mark.usefixtures('setup_function_type_a')
+@pytest.mark.usefixtures("setup_function_type_a")
 def test_with_setup_a():
-    print('\n----------------- test function uses type A setup and teardown ------------------\n')
+    print("\n----------------- test function uses type A setup and teardown ------------------\n")
 
 
-@pytest.mark.usefixtures('setup_function_type_b')
+@pytest.mark.usefixtures("setup_function_type_b")
 def test_with_setup_b():
-    print('\n----------------- test function uses type B setup and teardown ------------------\n')
+    print("\n----------------- test function uses type B setup and teardown ------------------\n")
 
 
 ########################################################################
@@ -67,7 +67,7 @@ def test_with_setup_b():
 #                                                                      #
 ########################################################################
 
-'''
+"""
 test_with_setup_teardown.py
 ----------- setup_module ----------------
 
@@ -84,6 +84,6 @@ test_with_setup_teardown.py
 ------------- teardown_function ---------------
 
 ----------- teardown_module -------------
-'''
+"""
 
 

@@ -14,22 +14,22 @@ class Car:
         self._mileage = int(round(run_distance, -1))
 
     def __repr__(self):
-        _repr = self.__class__.__name__ + '(' + self.brand + ', ' + str(self._mileage) + ')'
+        _repr = self.__class__.__name__ + "(" + self.brand + ", " + str(self._mileage) + ")"
         return _repr
 
 
-if __name__ == '__main__':
-    MyCar_1 = Car('Opel', 12)
-    MyCar_2 = Car('Volvo', 18)
+if __name__ == "__main__":
+    MyCar_1 = Car("Opel", 12)
+    MyCar_2 = Car("Volvo", 18)
 
-    print('MyCar_1 brand: {brand}, MyCar_1 mileage: {mileage}'
+    print("MyCar_1 brand: {brand}, MyCar_1 mileage: {mileage}"
           .format(brand=MyCar_1.brand, mileage=MyCar_1.mileage))
-    print('MyCar_2 brand: {brand}, MyCar_2 mileage: {mileage}'
+    print("MyCar_2 brand: {brand}, MyCar_2 mileage: {mileage}"
           .format(brand=MyCar_2.brand, mileage=MyCar_2.mileage))
-    print('* * * * * * * * * *')
+    print("* * * * * * * * * *")
 
     MyCar_1.mileage += 42
-    print('MyCar_1 brand: {brand}, MyCar_1 mileage: {mileage}'
+    print("MyCar_1 brand: {brand}, MyCar_1 mileage: {mileage}"
           .format(brand=MyCar_1.brand, mileage=MyCar_1.mileage))
 
 

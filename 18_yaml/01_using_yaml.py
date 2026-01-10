@@ -16,22 +16,22 @@
 
 import yaml
 
-with open('./config.yaml') as config_file:
+with open("./config.yaml") as config_file:
     config = yaml.load(config_file)
     print(config)
 
 new_config = {
-    'tree_root':
-        {'branch1':
-             {'branch1-1':
-                  {'name': 'Node 1-1'},
-              'name': 'Node 1'},
-         'branch2':
-            {'branch2-1':
-                 {'name': 'Node 2-1'},
-              'name': 'Node 2'}
+    "tree_root":
+        {"branch1":
+             {"branch1-1":
+                  {"name": "Node 1-1"},
+              "name": "Node 1"},
+         "branch2":
+            {"branch2-1":
+                 {"name": "Node 2-1"},
+              "name": "Node 2"}
          }
 }
 
-with open('./new_config.yaml', 'w') as new_config_file:
+with open("./new_config.yaml", "w") as new_config_file:
     yaml.dump(new_config, new_config_file)
