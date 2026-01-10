@@ -29,8 +29,8 @@ def create_multiple_file_logger(name):
 
     log_file_debug_handler = create_handler(name, "debug", log_formatter)
     log_file_info_handler = create_handler(name, "info", log_formatter)
-    log_file_warning_handler = create_handler(name, "warning', log_formatter)
-    log_file_error_handler = create_handler(name, 'error', log_formatter)
+    log_file_warning_handler = create_handler(name, "warning", log_formatter)
+    log_file_error_handler = create_handler(name, "error", log_formatter)
 
     logger.addHandler(log_file_debug_handler)
     logger.addHandler(log_file_info_handler)
