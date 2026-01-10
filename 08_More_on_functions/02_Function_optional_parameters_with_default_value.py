@@ -17,14 +17,14 @@ print(add_numbers(2, 3, 4))  # ==> 9
 print()
 
 
-def login(user='administrator', password='secret'):
-    print('user =', user, ' password =', password)
+def login(user="administrator", password="secret"):
+    print("user =", user, " password =", password)
 
 
 login()                       # user = administrator  password = secret
-login('user')                 # user = user  password = secret
-login(user='user')            # user = user  password = secret
-login(password='new_secret')  # user = administrator  password = new_secret
+login("user")                 # user = user  password = secret
+login(user="user")            # user = user  password = secret
+login(password="new_secret")  # user = administrator  password = new_secret
 
-login(user='user', password='new_secret')  # user = user  password = new_secret
-login(password='new_secret', user='user')  # user = user  password = new_secret
+login(user="user", password="new_secret")  # user = user  password = new_secret
+login(password="new_secret", user="user")  # user = user  password = new_secret

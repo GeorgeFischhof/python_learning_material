@@ -16,7 +16,7 @@ class Employee:
         # not to any single employee
 
         cls.employees.append(name)
-        # 'cls' refers to the class (Employee) (convention only)
+        # "cls" refers to the class (Employee) (convention only)
         # This method modifies shared (class-level) state
 
 

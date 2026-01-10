@@ -7,7 +7,7 @@
 
 
 def function_returns_multiple_values():
-    return 5, 'apple'
+    return 5, "apple"
 
 
 # one way to use the values, when you
@@ -15,20 +15,20 @@ def function_returns_multiple_values():
 
 number_of_fruits, type_of_fruits = function_returns_multiple_values()
 print()
-print('number_of_fruits: ', number_of_fruits)
-print('type_of_fruits: ', type_of_fruits)
+print("number_of_fruits: ", number_of_fruits)
+print("type_of_fruits: ", type_of_fruits)
 print()
 
 
 # the other way is to use them as a tuple
 
 packed_fruits = function_returns_multiple_values()
-print('packed_fruits: ', packed_fruits)
-print('elements of tuple: [0] =', packed_fruits[0], ' [1] =', packed_fruits[1])
-print('type of packed_fruits: ', type(packed_fruits))
+print("packed_fruits: ", packed_fruits)
+print("elements of tuple: [0] =", packed_fruits[0], " [1] =", packed_fruits[1])
+print("type of packed_fruits: ", type(packed_fruits))
 
 
-'''
+"""
 Tips on returning multiple values
 ---------------------------------
 
@@ -39,7 +39,7 @@ And because it is grouped it can reside multiple lines
 def function_returns_multiple_values():
     return (
         5,
-        'apple',
+        "apple",
     )
 
 Note grouping is a general technique for multi-line stuff,
@@ -66,30 +66,30 @@ which identifies the returned value.
 If there is a need, you can add any number of new values without 
 any change in the existing caller functions  
 
-'''
+"""
 
-print('\n* * * * * * * * * *\n')
-input('Return with dict')
-print('\n* * * * * * * * * *\n')
+print("\n* * * * * * * * * *\n")
+input("Return with dict")
+print("\n* * * * * * * * * *\n")
 
 
 def get_some_fruits():
     fruits = {
-        'number_of_fruits': 5,
-        'color_of_fruits': 'red',
-        'type_of_fruits': 'apple',
+        "number_of_fruits": 5,
+        "color_of_fruits": "red",
+        "type_of_fruits": "apple",
     }
     return fruits
 
 
-print('Existing fruit eaters - callers')
+print("Existing fruit eaters - callers")
 today_fruits = get_some_fruits()
-print('We have {number} pieces of {fruit} to eat today'
-      .format(number=today_fruits['number_of_fruits'],
-              fruit=today_fruits['type_of_fruits']))
+print("We have {number} pieces of {fruit} to eat today"
+      .format(number=today_fruits["number_of_fruits"],
+              fruit=today_fruits["type_of_fruits"]))
 
 print()
-print('New requirement: I do not like yellow apples')
-print('What color of fruits we got?')
-print('We have {color} fruits now.'
-      .format(color=today_fruits['color_of_fruits']))
+print("New requirement: I do not like yellow apples")
+print("What color of fruits we got?")
+print("We have {color} fruits now."
+      .format(color=today_fruits["color_of_fruits"]))

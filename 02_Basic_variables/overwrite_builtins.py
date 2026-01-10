@@ -21,7 +21,7 @@ Python stores the built-in functions in builtins module:
 """
 
 import builtins
-builtins.print('print from builtins')
+builtins.print("print from builtins")
 
 """
 Result:
