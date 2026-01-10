@@ -6,19 +6,19 @@ class ConvertedUnit:
 
 
 def convert_meters_to_feet(meters) -> ConvertedUnit:
-    return ConvertedUnit(value=meters*3.28084, unit='feet')
+    return ConvertedUnit(value=meters*3.28084, unit="feet")
 
 
 def convert_feet_to_meters(feet) -> ConvertedUnit:
-    return ConvertedUnit(value=feet*0.3048, unit='meters')
+    return ConvertedUnit(value=feet*0.3048, unit="meters")
 
 
 def convert_celsius_to_fahrenheit(celsius) -> ConvertedUnit:
-    return ConvertedUnit(value=celsius*1.8+32, unit='Fahrenheit')
+    return ConvertedUnit(value=celsius*1.8+32, unit="Fahrenheit")
 
 
 def convert_fahrenheit_to_celsius(fahrenheit) -> ConvertedUnit:
-    return ConvertedUnit(value=fahrenheit-32/1.8, unit='Celsius')
+    return ConvertedUnit(value=fahrenheit-32/1.8, unit="Celsius")
 
 
 def unit_converter():
@@ -32,8 +32,8 @@ def unit_converter():
 
     # Ask for the unit to convert
     unit_to_convert = ""
-    while not unit_to_convert.lower() in conversion_functions:
-            unit_to_convert = input("Please specify what unit to convert (C|F|m|ft): ")
+    while unit_to_convert.lower() not in conversion_functions:
+        unit_to_convert = input("Please specify what unit to convert (C|F|m|ft): ")
 
     # Ask for the value to convert
     value_to_convert = float(input("Please specify the value of " + unit_to_convert + ": "))
@@ -48,5 +48,5 @@ def unit_converter():
                   ))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unit_converter()

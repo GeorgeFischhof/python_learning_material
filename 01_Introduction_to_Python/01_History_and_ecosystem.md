@@ -37,7 +37,7 @@ to support a **diverse international community** of Python programmers.
 You can donate to the PSF
 information on the official site: <https://donate.python.org/> <https://www.python.org/psf/>
 
-![I donated to PSF](../Images/PSF_I_Donated_280.png "I donated to PSF")
+![I donated to PSF](../Z_Images/PSF_I_Donated_280.png "I donated to PSF")
 
 ---
 
