@@ -1,1 +1,1 @@
-https://realpython.com/python-data-structures/
+<https://realpython.com/python-data-structures/>
