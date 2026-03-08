@@ -1,5 +1,5 @@
 [project.urls]
-Homepage = "https://github.dev/GeorgeFischhof/python_learning_material"
+Homepage = "https://github.com/GeorgeFischhof/python_learning_material"
 Documentation = "https://github.com/GeorgeFischhof/python_learning_material/blob/master/00_Install_Python_environment/README.md"
 Repository = "https://github.com/GeorgeFischhof/python_learning_material.git"
 Issues = "https://github.com/GeorgeFischhof/python_learning_material/issues"
