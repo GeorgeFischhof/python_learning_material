@@ -202,7 +202,13 @@ render_collapsed = "all"  # pytest-html - all is collapsed, just the statuses ar
 pythonpath = "src"
 testpaths = ["src/tests"]
 
-addopts = "--keep-duplicates --strict-markers --html=/test_results/test_result.html --self-contained-html --junitxml=/test_results/test_result.xml"
+addopts = [
+    "--keep-duplicates",
+    "--strict-markers",
+    "--html=/test_results/test_result.html",
+    "--self-contained-html",
+    "--junitxml=/test_results/test_result.xml",
+]
 markers = [
     # try out the test
     "george",
